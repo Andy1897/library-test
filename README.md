@@ -107,3 +107,4 @@ php artisan migrate --seed
 
 тестовый пользователь: admin@admin.com password
 
+Полезная дока: https://laravel.su/docs/8.x/sail#installing-sail-into-existing-applications
