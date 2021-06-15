@@ -49,6 +49,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
@@ -61,13 +62,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-##Описание задачи
+## Task description
 - 1.Реализовать сущности авторы и книги
 - 2.Реализовать административную часть:
   
 
     a.CRUD операции для авторов и книг
+
     b.вывсести список книг с обязательным указанием имени автора в списке
+
     с.вывести список авторов с указанием кол-ва книг
   
 - 3.Реализовать публичную часть сайта с отображением авторов и их книг (простой вывод списка на странице)
@@ -77,19 +80,30 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
   
     a.GET /api/v1/books/list получение списка книг с именем автора
+
     b.GET /api/v1/books/by-id получение данных книги по id
+
     c.POST /api/v1/books/update обновление данных книги
+
     d.DELETE /api/v1/books/id удаление записи книги из бд
     
-##установка
+## Install
 
 в папке с проектом запустить:
 
+cp .env.example .env
+
+composer install 
+
+php artisan key:generate
+
 ./vendor/bin/sail up
 
-после этого выполнить миграции(в .env файле поменять DB_HOST при отсутствии соединения с бд):
+проект поднят, можно тестировать, но для полной настройки необходимо выполнить миграции(
+в .env файле поменять DB_HOST при отсутствии соединения с бд)
 
 php artisan migrate --seed
+
 
 тестовый пользователь: admin@admin.com password
 
